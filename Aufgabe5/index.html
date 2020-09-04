@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Benutzererfassung</title>
 </head>
 
@@ -13,24 +14,26 @@
         <h1><b>Benutzererfassung</b></h1>
         </p>
 
-        <form>
+        <form action="/Aufgabe5/index.html">
             <section>
-                <input id="inputVorname" name="vorname" type="text" required placeholder="Vorname">
-                <input id="inputNachname" name="nachname" type="text" required placeholder="Nachname">
+                <input id="inputVorname" class="grow3" name="vorname" type="text" required placeholder="Vorname">
+                <input id="inputNachname" class="grow3" name="nachname" type="text" required placeholder="Nachname">
             </section>
             <section>
-                <input id="inputStrasse" name="strasse" type="text" required placeholder="Strasse">
-                <input id="inputNumber" name="number" type="number" placeholder="Nr.">
+                <input id="inputStrasse" class="grow5" name="strasse" type="text" required placeholder="Strasse">
+                <input id="inputNumber" class="grow1" name="number" type="number" placeholder="Nr.">
             </section>
             <section>
-                <input id="inputZipcode" name="zipcode" type="text" pattern="\d{4}" required placeholder="PLZ">
-                <input id="inputOrt" name="ort" type="text" required placeholder="Ort">
+                <input id="inputZipcode" class="grow1" name="zipcode" type="text" pattern="\d{4}" required placeholder="PLZ">
+                <input id="inputOrt" class="grow5" name="ort" type="text" required placeholder="Ort">
             </section>
             <section>
-                <input id="inputAlter" name="alter" type="number" placeholder="Alter">
-                <input id="inputEmail" name="email" type="email" required placeholder="Email-Adresse">
+                <input id="inputAlter" class="grow1" name="alter" type="number" placeholder="Alter">
+                <input id="inputEmail" class="grow5" name="email" type="email" required placeholder="Email-Adresse">
             </section>
-            <section>
+            <section class="buttons">
+                <input id="inputReset" type="reset" value="Verwerfen">
+                <input id="inputSubmit" type="submit" value="Senden">
             </section>
         </form>
     </main>
