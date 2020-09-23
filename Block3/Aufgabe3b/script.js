@@ -16,6 +16,6 @@ function wordCount(text) {
             {word: word, count: count}
         ]
     }
-    console.log(result);
+    return result;
 }
-wordCount("Hallo das ist ein Text, Hallo");
+console.log(wordCount("Hallo das ist ein Text, Hallo"));
