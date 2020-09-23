@@ -8,22 +8,22 @@
 </head>
 
 <body>
+    <main>
+        <section>
+            <h1><b>Beispiel: String.replace()</b></h1>
+        </section>
+        <section>
+            <p>Durch einen Klick auf den Button ersetzen sie Teile der Zeichenkette.</p>
+        </section>
+        <section>
+            <p>Vormals: <span id="oldString">Elke Hinz</span></p>
+            <button>Los!</button>
+            <p>Neu: <span id="newString"></span></p>
+        </section>
+        <script>
+            document.querySelector("button").addEventListener("click", replaceString);
+        </script>
+    </main>
 </body>
-<main>
-    <section>
-        <h1><b>Beispiel: String.replace()</b></h1>
-    </section>
-    <section>
-        <p>Durch einen Klick auf den Button ersetzen sie Teile der Zeichenkette.</p>
-    </section>
-    <section>
-        <p>Vormals: <span id="oldString">Elke Hinz</span></p>
-        <button>Los!</button>
-        <p>Neu: <span id="newString"></span></p>
-    </section>
-    <script>
-        document.querySelector("button").addEventListener("click", replaceString);
-    </script>
-</main>
 
 </html>
