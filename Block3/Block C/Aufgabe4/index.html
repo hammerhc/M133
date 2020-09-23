@@ -5,9 +5,34 @@
     <meta charset="utf-8" />
     <title>JavaScript</title>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    
+<body onload="load()">
+    <main>
+        <form action="/Aufgabe4/index.html">
+            <section>
+                <span>Wieviele Schrauben?:</span>
+                <input id="inputScrew" name="schrauben" type="number" value="0">
+            </section>
+            <section>
+                <span>Wieviele Muttern?:</span>
+                <input id="inputNut" name="muttern" type="number" value="0">
+            </section>
+            <section>
+                <span>Wieviele Unterlegsscheiben?:</span>
+                <input id="inputGrommet" name="unterlegsscheiben" type="number" value="0">
+            </section>
+            <section class="buttons">
+                <input id="inputReset" type="reset" value="Formular löschen">
+                <input id="inputSubmit" type="button" value="Senden">
+            </section>
+            <section>
+                <span id="result">Kosten:</span>
+                <input id="inputResult" name="result" type="number" readonly value="0">
+            </section>
+        </form>
+    </main>
 </body>
+
 </html>
