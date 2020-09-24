@@ -7,7 +7,23 @@
     <script src="script.js"></script>
 </head>
 
-<body>
+<body onload="load()">
+    <main>
+        <section>
+            <h3>Erweitern Sie das Array mit neuen Begriffen.</h3>
+        </section>
+        <section>
+            <input type="text" name="word" id="inputWord">
+            <button id="addWordButton">Los!</button>
+        </section>
+        <section>
+            <p>Aktuelle Werte im Array:</p>
+        </section>
+        <section>
+            <ul id="arrayList">
+            </ul>
+        </section>
+    </main>
 </body>
 
 </html>
