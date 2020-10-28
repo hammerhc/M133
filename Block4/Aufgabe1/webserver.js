@@ -3,7 +3,7 @@ const s = serve({ port: 8000 });
 console.log("http://localhost:8000/");
 for await (const req of s) { // Diese Zeile einfach mal so hinnehmen, wird später erklärt
   const text = Deno.readTextFile(
-    "C:/Users/vmadmin/Documents/M133/Block4/Aufgabe1/index.html",
+    "index.html",
   );
   text.then((content) => req.respond({ body: content }));
 }
