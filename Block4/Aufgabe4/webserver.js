@@ -7,19 +7,23 @@ const app = new Application();
 const router = new Router();
 router
   .get("/", (context) => {
-    context.response.body = readImages();
+    var images = "";
+  
+    for (const dirEntry of Deno.readDirSync("Images")) {
+      images += "<img src='Images/" + dirEntry.name + "'>";
+    }
+  
+    context.response.body = `
+    <!DOCTYPE html>
+      <html lang='en'>
+        <body>
+          ${images}
+        </body>
+      </html>
+    `;
   })
   .get("/Images/:img", (context) => {
     return send(context, "Images/" + context.params.img);
   });
 app.use(router.routes());
 app.listen({ port: 8000 });
-
-async function readImages() {
-  var html = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Document</title></head><body><main><section><h1>Hello World!</h1></section><section>";
-  for await (const dirEntry of Deno.readDir("Images")) {
-    html += "<img src='Images/" + dirEntry.name + "'>";
-  }
-  html += "</section></main></body></html>"
-  return html;
-}
