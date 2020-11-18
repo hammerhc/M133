@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>JavaScript</title>
+    <title>Kanban-Board</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,9 +16,15 @@
             <div id="done" class="headerItem">Done</div>
         </div>
         <div id="content">
-            <div class="contentItem">+</div>
-            <div class="contentItem">+</div>
-            <div class="contentItem">+</div>
+            <div class="contentItem" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div draggable="true" ondragstart="drag(event)" id="dragItem">Drag</div>
+            </div>
+            <div class="contentItem" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            </div>
+            <div class="contentItem" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            </div>
         </div>
     </div>
 </body>
