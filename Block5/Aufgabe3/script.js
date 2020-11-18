@@ -35,7 +35,7 @@ function loadArticle(json) {
 }
 
 function updateArticle() {
-  if (article.length > 0) {
+  if (article.body.length > 0) {
     article.body = document.querySelector("#textareaArticle").value;
     fetch("https://jsonplaceholder.typicode.com/posts/" + article.id, {
       method: "PUT",
