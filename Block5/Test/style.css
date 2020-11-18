@@ -20,7 +20,7 @@ html, body {
 }
 
 #header {
-    height: 200px;
+    height: 60px;
     padding: 10px 10px 0px 10px;
 }
 
@@ -39,5 +39,25 @@ html, body {
 .headerItem, .contentItem {
     display: flex;
     flex-direction: column;
+    text-align: center;
     width: 100%;
+}
+
+.headerItem {
+    font-size: 18pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    justify-content: center;
+}
+
+#todo {
+    background-color: orange;
+}
+
+#progress {
+    background-color: lightskyblue;
+}
+
+#done {
+    background-color: lightgreen;
 }
